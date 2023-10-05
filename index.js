@@ -91,10 +91,21 @@ let currentIndex = 0;
 
 btn.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % Data.length;
+    changeContent(currentIndex)
     // console.log(currentIndex)
-    let item = Data[currentIndex]
+    // let item = Data[currentIndex]
+    // imageElement.src = item.img;
+    // person.textContent = item.name;
+    // details.textContent = item.content;
+})
+
+//- making a seoperate function
+
+function changeContent(index){
+    let item = Data[index]
     // console.log(item)
     imageElement.src = item.img;
     person.textContent = item.name;
     details.textContent = item.content;
-})
+}
+
